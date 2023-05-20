@@ -1,5 +1,9 @@
 # Kickstarter Crowdsourcing Data Mart
-<div align="center"> ![TyJh](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/4d504249-abd1-48aa-b625-a346b0e6aa23)
+
+<div align="center" style="text-align:center;">
+  
+  ![TyJh](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/4d504249-abd1-48aa-b625-a346b0e6aa23)
+
 </div>
 
 
