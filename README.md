@@ -2,7 +2,7 @@
 
 <div align="center" style="text-align:center;">
   
-  ![TyJh](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/4d504249-abd1-48aa-b625-a346b0e6aa23)
+  ![giphy](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/dda9646b-b8bf-4305-bf37-66626eb2e278)
 
 </div>
 
@@ -21,6 +21,8 @@ Salah satu aspek penting dalam proyek ini adalah analisis data dari berbagai sum
 | Business Intelligence        | Tableau Public           |
 
 ## 🥂Model Dimensi
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/3d794976-ba3a-40bf-8ead-61be70195b32)
+
 
 ## 🥂Source to Target Mapping
 
