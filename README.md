@@ -16,7 +16,7 @@ Salah satu aspek penting dalam proyek ini adalah analisis data dari berbagai sum
 ## 🥂Ruang Lingkup Implementasi
 | Komponen                     | Alat                     |
 | ---------------------------- | ------------------------ |
-| Data Mart                    | Json                     |
+| Data Mart                    | Postgre SQL                     |
 | Extract, Transform, and Load | Pentaho Data Integration |
 | Business Intelligence        | Tableau Public           |
 
