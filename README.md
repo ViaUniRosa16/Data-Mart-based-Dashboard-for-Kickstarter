@@ -2,7 +2,7 @@
 
 <div align="center" style="text-align:center;">
   
-  ![TyJh](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/4d504249-abd1-48aa-b625-a346b0e6aa23)
+  ![giphy](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/dda9646b-b8bf-4305-bf37-66626eb2e278)
 
 </div>
 
@@ -16,25 +16,41 @@ Salah satu aspek penting dalam proyek ini adalah analisis data dari berbagai sum
 ## 🥂Ruang Lingkup Implementasi
 | Komponen                     | Alat                     |
 | ---------------------------- | ------------------------ |
-| Data Mart                    | Json                     |
+| Data Mart                    | Postgre SQL                     |
 | Extract, Transform, and Load | Pentaho Data Integration |
 | Business Intelligence        | Tableau Public           |
 
 ## 🥂Model Dimensi
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/3d794976-ba3a-40bf-8ead-61be70195b32)
+
 
 ## 🥂Source to Target Mapping
 
 ### 🧎🏻‍♀️Skema High Level Data Stanging Plan
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/9754cf73-fcb8-4708-a58c-24c8acebd44f)
+
 
 ### 🧎🏻‍♀️Detailed Load Schematic for The Dimension Table
 
+#### Dim Location
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/2849677a-5dc5-4209-ae73-1060ccd229a9)
+
+#### Dim Date
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/150ad1b3-1edf-4c3b-84b5-5a609532ff0d)
+
+#### Dim Project
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/bdaa3688-bd30-426e-93a8-bd50b8bed9d8)
+
 ### 🧎🏻‍♀️Detailed Load Schematic for The Fact Table
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/0e73ef78-b7b4-4ebd-940a-23277e6afef1)
 
 ## 🥂Business Intelligence
 
 ### 🧎🏻‍♀️Navigation Framework
 
 ### 🧎🏻‍♀️Dashboard Wireframe
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/5eb7cf23-538f-455f-916e-b4c81af69ea7)
+
 
 
 
