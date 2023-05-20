@@ -27,10 +27,22 @@ Salah satu aspek penting dalam proyek ini adalah analisis data dari berbagai sum
 ## 🥂Source to Target Mapping
 
 ### 🧎🏻‍♀️Skema High Level Data Stanging Plan
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/9754cf73-fcb8-4708-a58c-24c8acebd44f)
+
 
 ### 🧎🏻‍♀️Detailed Load Schematic for The Dimension Table
 
+#### Dim Location
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/2849677a-5dc5-4209-ae73-1060ccd229a9)
+
+#### Dim Date
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/150ad1b3-1edf-4c3b-84b5-5a609532ff0d)
+
+#### Dim Project
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/bdaa3688-bd30-426e-93a8-bd50b8bed9d8)
+
 ### 🧎🏻‍♀️Detailed Load Schematic for The Fact Table
+![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/0e73ef78-b7b4-4ebd-940a-23277e6afef1)
 
 ## 🥂Business Intelligence
 
