@@ -46,8 +46,6 @@ Salah satu aspek penting dalam proyek ini adalah analisis data dari berbagai sum
 
 ## 🥂Business Intelligence
 
-### 🧎🏻‍♀️Navigation Framework
-
 ### 🧎🏻‍♀️Dashboard Wireframe
 ![image](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/5eb7cf23-538f-455f-916e-b4c81af69ea7)
 
