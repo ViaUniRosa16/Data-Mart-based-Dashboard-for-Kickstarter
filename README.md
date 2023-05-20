@@ -1,4 +1,8 @@
 # Kickstarter Crowdsourcing Data Mart
+<div align="center">
+  ![TyJh](https://github.com/ViaUniRosa16/Data-Mart-based-Dashboard-for-Kickstarter/assets/70993056/4d504249-abd1-48aa-b625-a346b0e6aa23)
+</div>
+
 
 ## 🥂 Deskripsi Singkat
 Kickstarter Crowdsourcing adalah platform crowdfunding terkemuka yang menyatukan pendanaan kolektif untuk proyek-proyek kreatif terutama di bidang seni, tujuan kemanusiaan, teknologi, musik, film, mode, dan banyak lagi. Sebagai salah satu platform crowdfunding terbesar di dunia, Kickstarter menyediakan platform bagi para kreator untuk membangun proyek kreatif mereka. Hal ini memungkinkan pembuat konten untuk mempromosikan dan mempresentasikan ide proyek mereka kepada khalayak global, dengan tujuan mendapatkan pendanaan dari pendukung yang berminat. 
