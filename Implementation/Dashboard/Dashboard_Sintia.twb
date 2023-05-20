@@ -1,0 +1,1788 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='fact_project_campaign+ (dm_kickstarter)' inline='true' name='federated.08m39zw1raymkj1b511on1djuy0r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.07yqtn71o886ic11i1fg50mpduqo'>
+            <connection authentication='username-password' class='postgres' dbname='dm_kickstarter' one-time-sql='' port='5433' server='localhost' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_date' table='[public].[dim_date]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='fact_project_campaign' table='[public].[fact_project_campaign]' type='table' />
+          <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_date' table='[public].[dim_date]' type='table' />
+          <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_location' table='[public].[dim_location]' type='table' />
+          <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_project' table='[public].[dim_project]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[backers_count]' value='[fact_project_campaign].[backers_count]' />
+          <map key='[country_name]' value='[dim_location].[country_name]' />
+          <map key='[date]' value='[dim_date].[date]' />
+          <map key='[date_dim_id (dim_date)]' value='[dim_date].[date_dim_id]' />
+          <map key='[date_dim_id]' value='[fact_project_campaign].[date_dim_id]' />
+          <map key='[date_from (dim_date)]' value='[dim_date].[date_from]' />
+          <map key='[date_from (dim_location)]' value='[dim_location].[date_from]' />
+          <map key='[date_from]' value='[dim_project].[date_from]' />
+          <map key='[date_to (dim_date)]' value='[dim_date].[date_to]' />
+          <map key='[date_to (dim_location)]' value='[dim_location].[date_to]' />
+          <map key='[date_to]' value='[dim_project].[date_to]' />
+          <map key='[day_of_month]' value='[dim_date].[day_of_month]' />
+          <map key='[day_of_week]' value='[dim_date].[day_of_week]' />
+          <map key='[day_of_week_name]' value='[dim_date].[day_of_week_name]' />
+          <map key='[day_of_year]' value='[dim_date].[day_of_year]' />
+          <map key='[goal]' value='[fact_project_campaign].[goal]' />
+          <map key='[holiday_description]' value='[dim_date].[holiday_description]' />
+          <map key='[is_a_holiday]' value='[dim_date].[is_a_holiday]' />
+          <map key='[location_dim_id (dim_location)]' value='[dim_location].[location_dim_id]' />
+          <map key='[location_dim_id]' value='[fact_project_campaign].[location_dim_id]' />
+          <map key='[location_id]' value='[dim_location].[location_id]' />
+          <map key='[month ]' value='[dim_date].[month ]' />
+          <map key='[month_name ]' value='[dim_date].[month_name ]' />
+          <map key='[pledged]' value='[fact_project_campaign].[pledged]' />
+          <map key='[project_blurb]' value='[dim_project].[project_blurb]' />
+          <map key='[project_count]' value='[fact_project_campaign].[project_count]' />
+          <map key='[project_dim_id (dim_project)]' value='[dim_project].[project_dim_id]' />
+          <map key='[project_dim_id]' value='[fact_project_campaign].[project_dim_id]' />
+          <map key='[project_id]' value='[dim_project].[project_id]' />
+          <map key='[project_name]' value='[dim_project].[project_name]' />
+          <map key='[project_state]' value='[dim_project].[project_state]' />
+          <map key='[quarter ]' value='[dim_date].[quarter ]' />
+          <map key='[version (dim_date)]' value='[dim_date].[version]' />
+          <map key='[version (dim_location)]' value='[dim_location].[version]' />
+          <map key='[version]' value='[dim_project].[version]' />
+          <map key='[year ]' value='[dim_date].[year ]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>pledged</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pledged]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>pledged</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>goal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[goal]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>goal</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>backers_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[backers_count]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>backers_count</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[project_count]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>project_count</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_dim_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[project_dim_id]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>project_dim_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_dim_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[date_dim_id]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>date_dim_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_dim_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[location_dim_id]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>location_dim_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_dim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[date_dim_id (dim_date)]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date_dim_id</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[version (dim_date)]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_from</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_from (dim_date)]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date_from</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_to</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_to (dim_date)]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date_to</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[day_of_year]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_year</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[month ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>month </remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[year ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>year </remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[quarter ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>quarter </remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_name </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_name ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>month_name </remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>24</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week_name]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_week_name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>24</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_month</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[day_of_month]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_month</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>holiday_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[holiday_description]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>holiday_description</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_a_holiday</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[is_a_holiday]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>is_a_holiday</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_1843ED19746C4653A9F2008322A8A7FB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_dim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[location_dim_id (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>location_dim_id</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_FACABD343856426280196E8211A70F0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[version (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_FACABD343856426280196E8211A70F0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_from</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_from (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>date_from</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_FACABD343856426280196E8211A70F0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_to</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_to (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>date_to</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_FACABD343856426280196E8211A70F0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[location_id]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_FACABD343856426280196E8211A70F0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_name]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>country_name</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>75</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_FACABD343856426280196E8211A70F0A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_dim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[project_dim_id (dim_project)]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_dim_id</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[version]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_from</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_from]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>date_from</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_to</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_to]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>date_to</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[project_id]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_id</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[project_name]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_name</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>500</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_blurb</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[project_blurb]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_blurb</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>500</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[project_state]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_state</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>75</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='dim_date' datatype='table' name='[__tableau_internal_object_id__].[dim_date_1843ED19746C4653A9F2008322A8A7FB]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='dim_location' datatype='table' name='[__tableau_internal_object_id__].[dim_location_FACABD343856426280196E8211A70F0A]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='dim_project' datatype='table' name='[__tableau_internal_object_id__].[dim_project_B46E52CE7030468AB72B2B7FDDB34C8C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fact_project_campaign' datatype='table' name='[__tableau_internal_object_id__].[fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country_name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[date_dim_id (dim_date)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[date_dim_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[day_of_month]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[day_of_week]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[day_of_year]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[location_dim_id (dim_location)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[location_dim_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[location_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[month ]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[project_dim_id (dim_project)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[project_dim_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[project_id]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[project_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='real' name='[quarter ]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[year ]' role='dimension' type='quantitative' />
+      <drill-paths>
+        <drill-path name='country_name, project_state'>
+          <field>[country_name]</field>
+          <field>[project_state]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='dim_date' id='dim_date_1843ED19746C4653A9F2008322A8A7FB'>
+            <properties context=''>
+              <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_date' table='[public].[dim_date]' type='table' />
+            </properties>
+          </object>
+          <object caption='dim_location' id='dim_location_FACABD343856426280196E8211A70F0A'>
+            <properties context=''>
+              <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_location' table='[public].[dim_location]' type='table' />
+            </properties>
+          </object>
+          <object caption='dim_project' id='dim_project_B46E52CE7030468AB72B2B7FDDB34C8C'>
+            <properties context=''>
+              <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='dim_project' table='[public].[dim_project]' type='table' />
+            </properties>
+          </object>
+          <object caption='fact_project_campaign' id='fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A'>
+            <properties context=''>
+              <relation connection='postgres.07yqtn71o886ic11i1fg50mpduqo' name='fact_project_campaign' table='[public].[fact_project_campaign]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[date_dim_id]' />
+              <expression op='[date_dim_id (dim_date)]' />
+            </expression>
+            <first-end-point object-id='fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A' />
+            <second-end-point object-id='dim_date_1843ED19746C4653A9F2008322A8A7FB' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[location_dim_id]' />
+              <expression op='[location_dim_id (dim_location)]' />
+            </expression>
+            <first-end-point object-id='fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A' />
+            <second-end-point object-id='dim_location_FACABD343856426280196E8211A70F0A' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[project_dim_id]' />
+              <expression op='[project_dim_id (dim_project)]' />
+            </expression>
+            <first-end-point object-id='fact_project_campaign_AE821812F948473EAEE9C0B5D8E0E47A' />
+            <second-end-point object-id='dim_project_B46E52CE7030468AB72B2B7FDDB34C8C' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='fact_project_campaign+ (dm_kickstarter) (2)' inline='true' name='federated.08m39zw1raymkj1b511on1djuy0r (copy)' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr'>
+            <connection authentication='username-password' class='postgres' dbname='dm_kickstarter' one-time-sql='' port='5433' server='localhost' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_date' table='[public].[dim_date]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='fact_project_campaign' table='[public].[fact_project_campaign]' type='table' />
+          <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_date' table='[public].[dim_date]' type='table' />
+          <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_location' table='[public].[dim_location]' type='table' />
+          <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_project' table='[public].[dim_project]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[backers_count]' value='[fact_project_campaign].[backers_count]' />
+          <map key='[country_name]' value='[dim_location].[country_name]' />
+          <map key='[date]' value='[dim_date].[date]' />
+          <map key='[date_dim_id (dim_date)]' value='[dim_date].[date_dim_id]' />
+          <map key='[date_dim_id]' value='[fact_project_campaign].[date_dim_id]' />
+          <map key='[date_from (dim_location)]' value='[dim_location].[date_from]' />
+          <map key='[date_from (dim_project)]' value='[dim_project].[date_from]' />
+          <map key='[date_from]' value='[dim_date].[date_from]' />
+          <map key='[date_to (dim_location)]' value='[dim_location].[date_to]' />
+          <map key='[date_to (dim_project)]' value='[dim_project].[date_to]' />
+          <map key='[date_to]' value='[dim_date].[date_to]' />
+          <map key='[day_of_month]' value='[dim_date].[day_of_month]' />
+          <map key='[day_of_week]' value='[dim_date].[day_of_week]' />
+          <map key='[day_of_week_name]' value='[dim_date].[day_of_week_name]' />
+          <map key='[day_of_year]' value='[dim_date].[day_of_year]' />
+          <map key='[goal]' value='[fact_project_campaign].[goal]' />
+          <map key='[holiday_description]' value='[dim_date].[holiday_description]' />
+          <map key='[is_a_holiday]' value='[dim_date].[is_a_holiday]' />
+          <map key='[location_dim_id (dim_location)]' value='[dim_location].[location_dim_id]' />
+          <map key='[location_dim_id]' value='[fact_project_campaign].[location_dim_id]' />
+          <map key='[location_id]' value='[dim_location].[location_id]' />
+          <map key='[month ]' value='[dim_date].[month ]' />
+          <map key='[month_name ]' value='[dim_date].[month_name ]' />
+          <map key='[pledged]' value='[fact_project_campaign].[pledged]' />
+          <map key='[project_blurb]' value='[dim_project].[project_blurb]' />
+          <map key='[project_count]' value='[fact_project_campaign].[project_count]' />
+          <map key='[project_dim_id (dim_project)]' value='[dim_project].[project_dim_id]' />
+          <map key='[project_dim_id]' value='[fact_project_campaign].[project_dim_id]' />
+          <map key='[project_id]' value='[dim_project].[project_id]' />
+          <map key='[project_name]' value='[dim_project].[project_name]' />
+          <map key='[project_state]' value='[dim_project].[project_state]' />
+          <map key='[quarter ]' value='[dim_date].[quarter ]' />
+          <map key='[version (dim_location)]' value='[dim_location].[version]' />
+          <map key='[version (dim_project)]' value='[dim_project].[version]' />
+          <map key='[version]' value='[dim_date].[version]' />
+          <map key='[year ]' value='[dim_date].[year ]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>pledged</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pledged]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>pledged</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>goal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[goal]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>goal</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>backers_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[backers_count]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>backers_count</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[project_count]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>project_count</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_dim_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[project_dim_id]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>project_dim_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_dim_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[date_dim_id]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>date_dim_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_dim_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[location_dim_id]</local-name>
+            <parent-name>[fact_project_campaign]</parent-name>
+            <remote-alias>location_dim_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_project_campaign_6836C6C3E36E4879B15626A399099930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_dim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[date_dim_id (dim_date)]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date_dim_id</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[version]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_from</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_from]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date_from</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_to</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_to]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date_to</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[day_of_year]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_year</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[month ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>month </remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[year ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>year </remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[quarter ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>quarter </remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_name </remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_name ]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>month_name </remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>24</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week_name]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_week_name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>24</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_month</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[day_of_month]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>day_of_month</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>holiday_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[holiday_description]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>holiday_description</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_a_holiday</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[is_a_holiday]</local-name>
+            <parent-name>[dim_date]</parent-name>
+            <remote-alias>is_a_holiday</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_dim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[location_dim_id (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>location_dim_id</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[version (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_from</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_from (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>date_from</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_to</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_to (dim_location)]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>date_to</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[location_id]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>location_id</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_name]</local-name>
+            <parent-name>[dim_location]</parent-name>
+            <remote-alias>country_name</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>75</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_dim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[project_dim_id (dim_project)]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_dim_id</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[version (dim_project)]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_from</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_from (dim_project)]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>date_from</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_to</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_to (dim_project)]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>date_to</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[project_id]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_id</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[project_name]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_name</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>500</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_blurb</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[project_blurb]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_blurb</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>500</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[project_state]</local-name>
+            <parent-name>[dim_project]</parent-name>
+            <remote-alias>project_state</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>75</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_project_CFD1342819C446058AE840FCD29D4ADC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='project_state_parameter' datatype='boolean' datatype-customized='true' name='[Calculation_1366561039727333376]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[project_state] = &quot;canceled&quot;&#13;&#10;OR [project_state] = &quot;failed&quot;&#13;&#10;OR [project_state] = &quot;live&quot;&#13;&#10;OR [project_state] = &quot;successful&quot;' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='dim_date' datatype='table' name='[__tableau_internal_object_id__].[dim_date_EE9C322459124736AD0C4A1FFFFF9E8A]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='dim_location' datatype='table' name='[__tableau_internal_object_id__].[dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='dim_project' datatype='table' name='[__tableau_internal_object_id__].[dim_project_CFD1342819C446058AE840FCD29D4ADC]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fact_project_campaign' datatype='table' name='[__tableau_internal_object_id__].[fact_project_campaign_6836C6C3E36E4879B15626A399099930]' role='measure' type='quantitative' />
+      <column datatype='real' name='[backers_count]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country_name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[date_dim_id (dim_date)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[date_dim_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[day_of_month]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[day_of_week]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[day_of_year]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[goal]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[location_dim_id (dim_location)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[location_dim_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[location_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[month ]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[project_count]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[project_dim_id (dim_project)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[project_dim_id]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[project_id]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[project_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='real' name='[quarter ]' role='dimension' type='quantitative' />
+      <column datatype='real' name='[year ]' role='dimension' type='quantitative' />
+      <column-instance column='[backers_count]' derivation='None' name='[none:backers_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[goal]' derivation='None' name='[none:goal:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[project_state]' derivation='None' name='[none:project_state:nk]' pivot='key' type='nominal' />
+      <column-instance column='[project_count]' derivation='Sum' name='[sum:project_count:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Exclusions (backers_count,goal)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:backers_count:qk]' />
+          <groupfilter function='level-members' level='[none:goal:qk]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='country_name, project_state'>
+          <field>[country_name]</field>
+          <field>[project_state]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[sum:project_count:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>162.0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>3.0</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>14.0</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>600599.0</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>252.0</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>3473.0</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>165.0</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>23.0</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>4.0</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>29.0</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>26498.0</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>112744.0</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>201.0</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1513.0</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>47.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>7.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>24.0</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>453590.0</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>2772.0</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>9.0</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:project_state:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;canceled&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;successful&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;live&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;failed&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='dim_date' id='dim_date_EE9C322459124736AD0C4A1FFFFF9E8A'>
+            <properties context=''>
+              <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_date' table='[public].[dim_date]' type='table' />
+            </properties>
+          </object>
+          <object caption='dim_location' id='dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0'>
+            <properties context=''>
+              <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_location' table='[public].[dim_location]' type='table' />
+            </properties>
+          </object>
+          <object caption='dim_project' id='dim_project_CFD1342819C446058AE840FCD29D4ADC'>
+            <properties context=''>
+              <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='dim_project' table='[public].[dim_project]' type='table' />
+            </properties>
+          </object>
+          <object caption='fact_project_campaign' id='fact_project_campaign_6836C6C3E36E4879B15626A399099930'>
+            <properties context=''>
+              <relation connection='postgres.0gk5z8x1e3y8pa156h4ir10z3kzr' name='fact_project_campaign' table='[public].[fact_project_campaign]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[date_dim_id]' />
+              <expression op='[date_dim_id (dim_date)]' />
+            </expression>
+            <first-end-point object-id='fact_project_campaign_6836C6C3E36E4879B15626A399099930' />
+            <second-end-point object-id='dim_date_EE9C322459124736AD0C4A1FFFFF9E8A' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[location_dim_id]' />
+              <expression op='[location_dim_id (dim_location)]' />
+            </expression>
+            <first-end-point object-id='fact_project_campaign_6836C6C3E36E4879B15626A399099930' />
+            <second-end-point object-id='dim_location_48FBC427D3B542FDAACB3C5D60CE2DA0' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[project_dim_id]' />
+              <expression op='[project_dim_id (dim_project)]' />
+            </expression>
+            <first-end-point object-id='fact_project_campaign_6836C6C3E36E4879B15626A399099930' />
+            <second-end-point object-id='dim_project_CFD1342819C446058AE840FCD29D4ADC' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FBBEB989-BDF9-4E9E-99A0-6CD537BBB5BA}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Negara dengan jumlah sumbangan dan goal tertinggi </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_project_campaign+ (dm_kickstarter) (2)' name='federated.08m39zw1raymkj1b511on1djuy0r (copy)' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.08m39zw1raymkj1b511on1djuy0r (copy)'>
+            <column datatype='string' name='[country_name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[goal]' role='measure' type='quantitative' />
+            <column-instance column='[country_name]' derivation='None' name='[none:country_name:nk]' pivot='key' type='nominal' />
+            <column datatype='real' name='[pledged]' role='measure' type='quantitative' />
+            <column-instance column='[goal]' derivation='Sum' name='[sum:goal:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[pledged]' derivation='Sum' name='[sum:pledged:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Year' name='[yr:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:country_name:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:country_name:nk]' />
+              <groupfilter function='member' level='[none:country_name:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[yr:date:ok]'>
+            <groupfilter function='member' level='[yr:date:ok]' member='2022' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:country_name:nk]' direction='DESC' measure-to-sort-by='[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[sum:pledged:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[yr:date:ok]</column>
+            <column>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:country_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[sum:pledged:qk]</rows>
+        <cols>([federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:country_name:nk] / [federated.08m39zw1raymkj1b511on1djuy0r (copy)].[sum:goal:ok])</cols>
+      </table>
+      <simple-id uuid='{A1F75926-6893-45F3-B008-1C8E785F036D}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[yr:date:ok]' type='filter' values='relevant' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:Calculation_1366561039727333376:nk]</field>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:country_name:nk]</field>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:project_id:ok]</field>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:project_state:nk]</field>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[none:year :qk]</field>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[sum:project_count:ok]</field>
+            <field>[federated.08m39zw1raymkj1b511on1djuy0r (copy)].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7F24093B-B472-4FF6-A192-2C5603A5166C}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8F32A9F0-BAE2-4ACC-9A8A-AFA13929E564}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAW4klEQVR4nO3dWW9b+Znn8S/3VaT21ZItWbIsL5LLW8lLaklSlcRIMMl00A0MMFcTYOYy
+      LyHAXOdyZi4zGDQGg8YMurumu3rS5bJTrjheZGu39sWkRIq7uO/kmQu5Fie2SrZokdZ5PkCh
+      zEXn/B/y/M5CnvNQoyiKghAqpa32AISoJgmAULWqByCdTlMoFKo9DKFSVQ9AoVCgVCpVexhC
+      paoeACGqSQIg3jJF7t7+nGS+MlPTV2YyQry+QsrH3/7tP9I8cA5rbBn3do7edz4g7VvmxqVj
+      fLpYJDx3B6O+jLH/EtP//Cmeop26wCQB8zGcOS+Xb9zgT18u8Mufvb8z0VKO//3ff0fJosHY
+      /R69uPnjYpQfnnFweyFMejtCk1W2AKIGpD2LWAc/4Mb753BHivy7f/shK/PLJOJxcukEiXQW
+      xVjPzz+6RDhpYGj4DD+8dp5MQcNHP/6IKxdP8sn//ITO/v5vTVWhqLFx46fvEXa5mV1YYX1x
+      iXiuwNmrH+Gss/LR1VOyBRDVZz/6DvbpT/n9HxOcP9nJ//n0IaNXv8/2/BfcnHTT2XOOsrEH
+      raWR3nYjLY4Ovrw/QU/fADajFnvPELnMfU52Wbj92WcUAUNdEz29R9EbHPQea4dIDMXSTmNL
+      J8U6M729vVicrWiq/U1wLBbDZDJhNpurOQzxFlubuce2sZvzA+3EYgkUQKMzUu+wfeffSgCq
+      JJ/PYzQaqz2MA1drdcsxQJVEo9FqD6Eqaq1uCYBQNQmAUDUJgFA1CYBQNQmAUDUJgFA1CYBQ
+      NQmAUDUJgFA1CYBQtbcqAOFgkDIlVhaXKb7kOZOTkwAsLi4+d38mFiYczxAMBl/4d7mQh6fh
+      JCgFph58ye1bt1jaCBEMBvnzs6XCoSDlN3oGVZlgMAT8ZR3fyDM1+QQFcK0skvnWVaX51DaB
+      7dTLa00kWPd4gDKLi8sUUyHGZ1cJ+jzkXvbCPvPy8VSHkvHxj/90h/wu78dLX4ewC91vfvOb
+      37yZoe1NLpdDr9ej1+9+ZnYm7uez/3eTpMZCcdvLyvo6RUM9+W03EzNLWOqbsZkNuN1uurq6
+      8Pt8WIxFJh5MsuaL0uKwkM5sc+vWHfIaK6T9TMwsY2loxrs4wfTsMqa2HlptWlxPPbQePU67
+      Q8etz26SVMwYskEeTc2DzsDY3VuEUxos2hTjE7NoLQ68S9MsukK0H2lHt4e6U6kUNtuLz1Ys
+      JgL833+5RRYTxYSPtbU1koqNcnyT8ekFzM4W7GYNG24/HV3tRPx+LNocfxqfY2MrQmuDiUgk
+      zr0/fkFKsWAqRng8OYfB3kDYPc/kzBI6RyPtjQ7ca0u4t6KcHj5FajuMRZPiy8dzuD0B2pvt
+      jD+4z+y6nyPNNh49eMjiZoSBrnrG7o/hixUwa1NMjk3y1LOFe3UVY1MHdaaXv5e71f06NlfW
+      qG8xkSg5iQY2aGiwsb7mJRv18nh6GZQMd774I4q5gXDETTxV5On8FOtbCVqdurdnC2BxtHFq
+      ZISLZ45jtDVw+dp1MqFVJqfmyefS+ILbzz2/UCiQzWfp7DtDu1VDPBknZ2xgZHiEC2d6mBqf
+      oZBN4A+5SRSbuXZpBJNOA1ozFy5fwJCPsR7MMnRmhMtnjxOPxSnlM6xvRTh5eoTRi4MsTM6Q
+      LeTZ8vnJ5fIopTz571iD7oW+rpmRkREunR3AYK7j0pXLFOPbTE1MUMyn2ApGAQ2ggKJQLBRQ
+      cjGaes/TWqclm46R1zqfjb2bmYkn5ApZtjxrRAp1XLtyGdu3Tsgsl4qUFYhFQhQyMZxHz9HV
+      aGTbtU7j0Cgtdi3bHjedZ69wuq+DwOYaR85coT4fYjOR4/jpC9jNBkbPdhOOV+AF2LMSq+ur
+      eDb8uJ6uEQqFgBLhUJR8PoeiFDE4uzg7PMLwwBGo7+ZIg4lUNkdwfZ5w/i3bBSokAjyeXcVi
+      sWHQ6TFZbHS01INOj826czp1g7HAZzc/I4UNrc6A1WLCaDKh0+vR67QUE34ez7ppbWtEYzBh
+      MzeQDi9yb2p+Z7emlGV6YoJ1jx+D0UQpFeTh7Ar5XB6NwYzZqEOTi/Pg8SLNHc2AFrvVil6v
+      I5eKf+cuxN5oUJIBHsysYDBbMRr0mExGOtraKGtN2K1GwEC9Mcvnt24SKlowGwzYLCZMJhM6
+      rQGDXkspGeDhrJu2jkY0Gh02RxPFbRf3xibIl3fW0jZnC6OXT7PwZBm9wYhGp8duNWM0mbA0
+      1LP08AsWnvqxOOqYe3CHVW8EZ1MLi4/u4ErpaLIaMRn0WO11GAxGDHpNJV6APSmlY9QfHebK
+      1Ws0GYs4zHDr9l0i6TxavY5SLkM6VyAVcjOz4qG1xUm5XKRQLGG12dBq9HI9QLUEAgFaW1ur
+      PYxdFRNB7j6eRWdv4er502i1+1+4a63u5wIQi8XI5XIHOoBMJoNer8dgMBzofKstkUhQV1dX
+      7WEcuFqr+7mjFafTeeADUOsWAKipNeFBqqW636pjACEqTQIgVE0CIFRNAiBUTQIgVE0CIFSt
+      5lsjTq34+C9/P1btYbyytkY7//k/fFjtYYjvUPMByBVK+LdT1R7GK9PpZOP6NpB3SaiaBECo
+      mgRAqJoEQKiaBEComgRAqNq+PwaNB1zcG1/jyg/eoxBYY2pxA43ByfBAA4+nV7A1dTPoKDAR
+      1/PDC0NMfPEJ+u73GO5rqMT4hdiXfQfA0XqUod40CgqNnf18r7Gd+SU3nlCc6x/8gM2FKWIZ
+      MyZtmlQ2RhYT1mIZRVEol7/5/8t+LLtcLu93iNWhKLv+APhuNR9mtVZ3RXeB8qkoS2ubHB8c
+      5KvruzQACrS3N7AwtUJbd2clZynEvux7CxDeXGZi9gm2YIIWcw5vJE80mWXgiIMv//A59uZu
+      Bu06yg0tbMxvMNB/lGxMi0ajQafTodFo0Gq16HQvbiai1b6lhynP6nuZ3Wo+zGqt7n0HoOnI
+      AP/myMDXt0e+9diPuo4/99wffP8DAJxN+52rEJXxlq5ehagMCYBQNQmAUDUJgFA1CYBQNQmA
+      UDUJgFA1CYBQNQmAUDUJgFA1CYBQNQmAUDUJgFA1CYBQNQmAUDUJgFA1CYBQNQmAULV9XxKZ
+      DHl4OL3OpfeuoIl6GZtcxN7ex+kOA/cmFnG099JvyzGTMPDe8ACzD/4VXce7DPUc/C9SCvHn
+      9h0Aa0MbfR0xyopC0BfknWsfsDU3xbxHy7vX32dzYZpowkKpECNTSBBLFbBli3z797m/ao3y
+      IlX+He992a2ly241H2a1Vve+A6DV6b/5BXHNzhX/Oi2U2OmKoNNpKJehs93B0vQqzT1HyJS/
+      eSG+6hMjfYHUodbqrkhblMeTU9iDCQa76rh3+zOMznZOdxm5c/smZkc7gw5QGlpYnX7Ile4+
+      XNGd9hhf/bfbL8XXUguNV6LRvLQm2Klrt8cPq1qre98BaOzq5+d/3f/17e5jJ7/+98dHBp97
+      7k9+/DEA9S37nasQlbHvAGg0mkqMQ4iqkI9BhapJAISqSQCEqkkAhKpJAISqSQCEqkkAhKpJ
+      AISqSQCEqkkAhKpJAISqSQCEqkkAhKpJAISqSQCEqkkAhKpJAISq7XpF2J07dzCbzVy+fHlP
+      E4sHN5icW8XW3M2pbjtj43PUdw1w1JJhMWnk8smjLE1+ibb1HP2ddRUpQIj92HUL4Ha78Xq9
+      e55YwOfjxMhldMkIyy4Pw5euokv42d4uEE8GyJczBEMRksn8vgcuRCXs6ZrgX/3qV/z2t7/F
+      6dy9mZWj3sH8xAN01iacGgWT0YDJoKFYgq42O8szKzT0HCUPz7VDKRQKaLUvzmKxWHzlomqC
+      opDPvzzopVJp18cPq1qre08BKJfLJBIJfve73/HrX//6pc9LxuKY65xkk3FsTQ08fvQQBRP9
+      Tig3tjE1O8bo+V7csW/aonzVJsNoNL54gPp9X7dfHRrNS2uCnfYguz1+WNVa3bsuXadPn8Zo
+      NHLjxg2sVitHjx7ddWLHhs7RlEhhMFuxmHQ0tyQxWm0YUECvo+nD9zEa9dgbpZOEqA27BuCd
+      d94BdoIA8Itf/GLXiWl1Bpz19V/fdvzZLpPObAbAKJ89iRqxawAUpUwum+Or7pxarR6jyYCs
+      v8VhsXsAyglufvJPjM+v0X/iGMGEkf/0H/8G00GNTog3bNedEa3OyU//5pecOd5N7/HjOEw6
+      3t5ezUL8pT3sjZv40c9uYNAa+PhnH8vaXxwqewhAgTu//1/cn/Uz9ocvqJ1PcIXYvz0EoEwR
+      HTHPCqFUSQ6AxaGyh2+ZjIxe/zG2pqd0Hj+JUiyB/i3t2S/En9nDFiDH559+RjqX4h/+x3/j
+      734/JgfC4tDYQwC0WMx6SmUFZ1sH5DJvflRCHJDv+CIsj3vVzdDlq2x5fAz+6Of09bQf1NiE
+      eON23QIoSoGAb4NP/v6fKVHi85tfouh0ciAsDo1dtwBarY1L1z/AblS4M75I75mr1M7Pmwmx
+      f3s611irUzh2apQWm1YOgMWhsoeD4AyzK8v4N/ysLyzJF2HiUNlDACyMnDxJ1LdAw4lhzG9+
+      TEIcmF13gcqlBH/4ly9IA32D/ejyGYogxwHi0Ng1ABqtiRNnzpDLpfEGIhzp7kC+AxaHya67
+      QBqNkSPHOhi78wWZbIKbt+9R2uX5pVyS8Qd3GZ9/SiG9zb0v77DkDpD0rTO9ttNdwjX/GFcg
+      VckahHhtezgGUECBfKFE2DXHo7mnL/0kaGNtiea+EYYHjrC+usbAyEUyfheRUAZ/xEOxnGPT
+      42Y7mq1oEUK8rj2dDPeTv/olmUKJi+cvYrS+vKFVJhnHs/WIFZ2ZpkYLNouFOquefAE6miys
+      L61T19lDGWmLUmvtQQ5KrdW9hwBocTa1sHtHoB2Nre0UbDrysSB6LSwuzZOKleh1grm5g+m7
+      j3j3XC8bcWmLUmvtQQ5KrdVd0aWrtbsfZcuLrmOYZqcJr2eLvt7jWCiBxcS10VHsdhNmpxxK
+      i9pQ0QBotHrau3q+vt3V3fPc4876ne2I7S1dqYvDRzr0CFWTAAhVkwAIVZMACFWTAAhVkwAI
+      VZMACFWTAAhVkwAIVZMACFWTAAhVkwAIVZMACFWTAAhVkwAIVZMACFWTAAhVq3gAstte5td9
+      lAspxv50F5c/Rjq8ydJGCICt9Tm8EfmNAVEbKnpxolLKMb3goWTQsppU6B4axrM4h9Zex3p2
+      i+NHnKytzmPraaOz0VLJWQvxWioaAL97nY7+E/hcK5R1Rpx2O+k6I9k8dNSb2Fh3YW3tBqQt
+      Sq21BzkotVZ3BQNQIh6LsbnuxeMPc+5kL54tL6FYgW6nCXNLB7P3J7g4fBRPQtqi1Fp7kINS
+      a3VXcOnSceLcuwwoCtvRKA0OK0sLSxw/fRaHpoBit3L+3DvUN1gw2KW9rqgNFV+9ajQaGhsa
+      ABg8ffbZvTv7++a2FgDqa2cFIFROPgYVqiYBEKomARCqJgEQqiYBEKomARCqJgEQqiYBEKom
+      ARCqJgEQqiYBEKomARCqJgEQqiYBEKomARCqJgEQqiYBEKpW0QCU8imeTI6z7o2glLLMTU3i
+      206RjQVw+2MAhL1PCcVzlZytEK+togGIR7dp7u4j6lpmbmEOS3M7rvknhDaDPHEvU1ZKLDwZ
+      Y9OXrORshXhtFb0muKGlgy3XKpb2HjSZIO2tbSjRLTJ5De0OA95NN6YmaYsCtdce5KDUWt0V
+      DUDQ85S8uYWT7Q2szHiIJhNE4nna6kwYW9uYG5tl5HQXWylpi1Jr7UEOSq3VXdGlq1zMs7Y8
+      yaarnvPnTjE3Pkn7wFmatAUUpx3N4CANTXVoraZKzlaI11bRALQdG6Lt2NDXty9cufrc4z1H
+      d3Z/WsyVnKsQr+8t3b84/PKFEqVyudrDeGV6nRaDXlftYeyZBKBG/dd/GOP2xNNqD+OV/fL9
+      If79j0aqPYw9ky/ChKpJAISqSQCEqkkAhKpJAISqSQCEqkkAhKpJAISqSQCEqkkAhKpJAISq
+      vbEAKIpCqVikXFZQlDLlsgJAuVyirChvarZCvJI3djJceGOBiSUvBlsTJ51lxmJafnplhAc3
+      /w7jsY+5cKLpTc1avKUWXCE+H1870Hm+sQCE4jmuv/8hnoVJkgUzTdYM8WQILK28PSfLioPk
+      CSf417GDDcCbOwZQFIqlEoWigk4LrR3NPJlYobOn9Y3NUohX9cYC0NPVytjdO6RNjdTXWWms
+      b0Zr0NFU34jdIpchiNrwxpZEa2MX3/9B13P3jY5eBqDf+abmKsSreS4AsViMXO5gm1ZlMhn0
+      ej0Gg+GFj5s1OX52qeuFj9Uyu8VIIBB46eOJRGLXvx/qtGDXv3119zTqX7vuemPxwN9rjaJU
+      9zPJWCyGyWTCbFbXlfKBQIDWVvUdD9Va3fJFmFC1QxOAfCbBxsYm2WKZTGIbt9tNIvOsA5mi
+      EAv78YdjoCjEwwE2vH5KikI05MfjC1FSABSyyShut5t4Ok8unWDD7SaazFIuZPFsbBBNZatZ
+      5l/IpRNsx1PAs9fAvUGmsNNNIh4J4HK5dmotFQl4N3dqKRXwezcJbH+zO5KOR3BveskVyxRy
+      aSLRBApQzKfZ3HCTzNZWhz5FKRPyedjwBig924n5dr2FfJoNlwuPP0yxkGHT5SKW2lkelHIR
+      n2eDUDR5SAKgFFmcmyOTTTH7ZJlELEo+l2Vi+gkAuXSY2fl11qYfE0hm8Pj8xEPrLM6t8WRt
+      k8jWGq6tKACJWIx8PsfE5AzpeJRsPs/U5BQrCzNspzLMT81SS619N9cXWF73opSLTD1+TDqf
+      pVDcWSAUpUypmGVxcZWQe5FVf5SJyWkSYR/BeJqF6ZlntRTZcHnIRj0suIJ4N9ZYXF6nrJR4
+      MjlOIpMnX6ixAJQLRKMJkp55lnyZZ/d9U2/St8JaKE+pXCYResqGP8VXe/v+tQW80RQr8zOH
+      JABo0CkFNjd9bPp8OJ11eDbd1Dfu7GsW0tu09Z7l8lAL3rie/v5eNIqJ9q4myMTxb6ew262A
+      Bke9A5/7KY6mVhxOJ0GPC0t9C846OwGPG8Vk48WH69VxfPAUNpOecilNJBLH5w2Qf9ZP1dnU
+      TrPDQk9fP4l4kbPnztBWZ8TY2ElPs5265hZ2mhTq6D85gEZjoq2pjqP9g9RbjSjFAuHtKMEt
+      L5lCqZpl/gWtzohFl8e9XaatfqcKZ/NX9Q6QT2WJRTwks0UKiSSBSICSslNDndNBxOchVzYc
+      kgBotJw4N8r7V8/T7LRR0tq4du0qcf8mJUBrMJGORwmGU9SZiywuuzg2NIwpn8Da3se5gQ4C
+      wQgoCiWNiSvfu048sEle0XP5+vcoh71shGO8M3odYzZMuraWBQA0GiONHd2MXuxjacEF7JyP
+      tekJcqSrBbO+yHY8QypXoBDbYnO7zPCpfjQ7z2RlcYGWYydpr7d+M1GtFkdTB6OjF1hbmK9G
+      WS+lFPM0dA/x7mAjrq34zn2KwqY3xJGuZuxHTvKTD68R2ljB0naCGz+8xopr53l+f5BT50dp
+      shQOT2OsiGeFufUgpy9cJOxZYdUbob33JCtTE3QMnkKfnWBdcXLOlOWh30swFKJ/6Az65DLz
+      YS3Dpxt5PLNGmzXDymaI1p5B4sENFta3aOjso6dBw+yjBzg6erHWzGqjwPj9hwRSBXQWG90t
+      Zu4/WmXo7BkmJ59wdqQPe2M3Vr0G4/EBHj16iKPzBLlEBI87QNDrpb+/gbzWQcgXxBu8S1f/
+      WYqBeTaCaXIGK32dDdy//5i+M+erXexzlHKBJ+MTpEsGzp7VMTkzz/DpY9gbjmDVa0jk49wf
+      n6Ch8zgUkjz40wSDw+eZHJ/gxIljTE4+wlDXxv8HsUvAMuHAco0AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
