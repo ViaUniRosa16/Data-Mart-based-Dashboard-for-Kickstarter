@@ -24,6 +24,19 @@ Salah satu aspek penting dalam proyek ini adalah analisis data dari berbagai sum
 
 ## 🥂Source to Target Mapping
 
+### 🧎🏻‍♀️Skema High Level Data Stanging Plan
+
+### 🧎🏻‍♀️Detailed Load Schematic for The Dimension Table
+
+### 🧎🏻‍♀️Detailed Load Schematic for The Fact Table
+
+## 🥂Business Intelligence
+
+### 🧎🏻‍♀️Navigation Framework
+
+### 🧎🏻‍♀️Dashboard Wireframe
+
+
 
 
 
